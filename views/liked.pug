@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Liked Blogs
+    each blogs in liked
+      .cardS
+        .name  
+          h2=blogs.title       
+        .description        
+          p=blogs.description 
+            .button 
+              a(href="blogcrud/liked/remove/"+blogs._id)
+                i(title ="Delete Blog" class="fa-solid fa-trash-can")
+                         

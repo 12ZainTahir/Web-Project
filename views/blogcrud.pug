@@ -1,0 +1,28 @@
+extends layout
+block content
+   .container 
+    .row
+        .col-sm-8 
+            
+             img( class="imag" ,src="/images/pic 2.png", alt="")
+                
+        .col.sm-4
+            a(href="blogcrud/add",class = "btn add") Write blog 
+                <i class="fa-solid fa-pen"></i>
+       
+        each blogs in blog
+          .cardS
+             .name  
+                h2=blogs.title       
+             .description        
+                p=blogs.description 
+       
+                 .buttonn  
+                     
+                     a(href="blogcrud/liked/"+blogs._id) 
+                           i(title ="Edit Blog" class="fa-solid fa-thumbs-up")
+                     if user          
+                        a(href="blogcrud/delete/"+blogs._id)
+                           i( title ="Delete Blog" class="fa-solid fa-trash-can ")
+                        a(href="blogcrud/edit/"+blogs._id) 
+                           i(title ="Edit Blog" class="fa-solid fa-pen-to-square")

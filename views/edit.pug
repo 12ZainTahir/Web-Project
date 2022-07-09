@@ -1,0 +1,13 @@
+extends layout
+block content 
+    h1 Edit Blog
+    form(action="/blogcrud/edit/"+blog._id, method="post")
+        .form-group 
+            label(for="title") Blog title 
+            input#title(type="text", class="form-control" name = "title" value=blog.title)
+        .form-group 
+            label(for="description") Blog description 
+            input#description(type="text", class ="form-control" name ="description" value=blog.description )
+            
+            br
+        input(type="submit", class="btn btn-info" value="Edit Blog")

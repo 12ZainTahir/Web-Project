@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Login
+    
+  form(action="/login", method="post")
+    
+        .form-group 
+            label(for="email") Email 
+            input#title(type="text", class="form-control" name = "email" value="zaintahir0012@gmail.com")
+        .form-group 
+            label(for="password") Password 
+            input#price(type="password", class ="form-control" name ="password" value="12345678" )
+            br
+        input(type="submit", class="btn btn-info" value="Login")
